@@ -24,7 +24,7 @@ function getTimeSpent(){
 
 <!-- Main game loop -->
 
-window.setInterval(function(){
+setInterval(function(){
   TimePassing();
   getTimeSpent();
 }, 1000);
