@@ -1,30 +1,36 @@
-var myCultivation = new Cultivation();
-var timeSpent = 0;
+var paused = false;
+var game = new Game();
+
+function initGameView(){
+  getCultivation();
+  getTimeSpent();
+}
 
 function CultivateClick(value){
-  myCultivation.ki = myCultivation.ki + value;
-  $('#cultivation').html("<p>ki gathered: " + myCultivation.ki+"</p>");
-  getTimeSpent();
-  showTime();
+  game.kiCultivation.ki = game.kiCultivation.ki + value;
+  getCultivation();
 }
 
 function getCultivation(){
-  return myCultivation.ki;
+  $('#cultivation').html("<p>ki gathered: " + game.kiCultivation.ki+"</p>");
 }
 
 function TimePassing(){
-  timeSpent = timeSpent + 1;
+  game.timeSpent = game.timeSpent + 1;
   }
-function getKi(){
 
-}
 function getTimeSpent(){
-  $('#timeSpent').html("<p>year "+ Math.floor(timeSpent/52) +", week "+ (timeSpent%52 + 1) +"</p>");
+  $('#timeSpent').html("<p>year "+ Math.floor(game.timeSpent/52) +", week "+ (game.timeSpent%52 + 1) +"</p>");
 }
 
-<!-- Main game loop -->
+
+
 
 window.setInterval(function(){
   TimePassing();
   getTimeSpent();
 }, 1000);
+
+window.onload = function(){
+  $('#main').load('game.html');
+};
