@@ -30,7 +30,3 @@ window.setInterval(function(){
   TimePassing();
   getTimeSpent();
 }, 1000);
-
-window.onload = function(){
-  $('#main').load('game.html');
-};
