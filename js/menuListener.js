@@ -1,20 +1,20 @@
 $(function() {
-    $('#home').click(function() {
+    $('#trainBody').click(function() {
         //chargement du contenu de la pge
         $('#main').load('game.html');
 
         //changement du lien actif
-        $('li,#home').addClass('active');
-        $('li,#links').removeClass('active');
+        $('li,#trainBody').addClass('active');
+        $('li,#trainKi').removeClass('active');
         return false;
     });
 });
 
 $(function() {
-    $('#links').click(function() {
-        $('#main').load('options.html');
-        $('li,#links').addClass('active');
-        $('li,#home').removeClass('active');
+    $('#trainKi').click(function() {
+        $('#main').load('trainKi.html');
+        $('li,#trainKi').addClass('active');
+        $('li,#trainBody').removeClass('active');
         return false;
     });
 });

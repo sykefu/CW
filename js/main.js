@@ -6,9 +6,14 @@ function initGameView(){
   getTimeSpent();
 }
 
-function CultivateClick(value){
-  game.kiCultivation.ki = game.kiCultivation.ki + value;
+function cultivateClick(){
+  game.kiCultivation.ki = game.kiCultivation.ki + game.kiCultivation.cultivateClickValue;
   getCultivation();
+
+  if(game.kiCultivation.ki >= 10)
+    $('#trainKi').removeClass("invisible");
+  if(game.kiCultivation.ki >= 15)
+    $('#adventure').removeClass("invisible");
 }
 
 function getCultivation(){

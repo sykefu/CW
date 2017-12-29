@@ -5,6 +5,7 @@ class kiCultivation{
     this.ki = 0;
     this.lifespan = 70;
     this.Rank = "mortal";
+    this.cultivateClickValue = 1;
 
   }
 
