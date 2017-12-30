@@ -29,7 +29,9 @@ function TimePassing(){
   }
 
 function getTimeSpent(){
-  $('#timeSpent').html("<p>year "+ Math.floor(game.timeSpent/52) +", week "+ (game.timeSpent%52 + 1) +"</p>");
+  //$('#timeSpent').html("<p>year "+ Math.floor(game.timeSpent/52) +", week "+ (game.timeSpent%52 + 1) +"</p>");
+  $('#timeSpentYear').text(Math.floor(game.timeSpent/52));
+  $('#timeSpentWeek').text(game.timeSpent%52 + 1);
 }
 
 function overTimeBodyCultivation(speed){
