@@ -7,14 +7,16 @@
   <!--TODO: add sliders for Adventure and Ki training. make adventure hidden until unlock.-->
     <h5>Rest</h5>
     <input type="range" min="0" max="100" value="50" class="slider" id="rest" oninput="setRest(this.value)">
-    <span id="restvalue"></span><br/>
+    <span id="restvalue"></span>%<br/>
     <h5>Train Body</h5>
     <input type="range" min="0" max="100" value="50" class="slider" id="bodytraining" oninput="setBT(this.value)">
-    <span id="bodytrainingvalue"></span><br/>
+    <span id="bodytrainingvalue"></span>%<br/>
+    <div>Time remaining : <span id="remainingTimeValue"></span>%</div>
   </div>
+  <br/>
   <div id="characterData">
     <h5>Derp</h5>
-    <span id="bodyTraining"></span><br/>
-    <span id="timeSpent"></span><br/>
+    <div>Body strength : <span id="bodyTrainingStrength">0</span></div><br/>
+    <div>Body thoughness : <span id="bodyTrainingThoughness">0</span></div><br/>
   </div>
 </div>
