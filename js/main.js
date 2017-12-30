@@ -1,15 +1,21 @@
 var paused = false;
 var game = new Game();
+var derp = 3;
+var restval = 0;
+var btval = 0;
 
-function initGameView(){
+function initKiView(){
   getCultivation();
   getTimeSpent();
+}
+
+function initBodyTrainingView(){
+  $('#percentbodytraining').html("<p>"+btval+"</p>");
 }
 
 function cultivateClick(){
   game.kiCultivation.ki = game.kiCultivation.ki + game.kiCultivation.cultivateClickValue;
   getCultivation();
-
   if(game.kiCultivation.ki >= 15)
     $('#adventure').removeClass("invisible");
 }
@@ -32,4 +38,5 @@ function getTimeSpent(){
 window.setInterval(function(){
   TimePassing();
   getTimeSpent();
+
 }, 1000);
