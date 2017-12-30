@@ -1,6 +1,5 @@
-//TODO: find a way to send these to main.js ?
 
-
+//TODO: add a min rest value, will make it dependant on how op you are later.
 function setRest(value){
   restval = parseInt(value);
   //ugly code to prevent more than 100%
@@ -13,6 +12,7 @@ function setRest(value){
   $('#restvalue').html(restval+"%");
 }
 
+
 function setBT(value){
   btval=parseInt(value);
   //copy pasted ugly code
@@ -24,8 +24,17 @@ function setBT(value){
   $('#bodytrainingvalue').html(btval+"%");
 
 }
+//TODO: add control for other sliders in game.html
 
+function loadGameView(){
 
+  $('#rest').val(restval);
+  $('#rest').trigger('change');
+  $('#restvalue').html(restval+"%");
+
+  $('#bodytraining').val(btval);
+  $('#bodytraining').trigger('change');
+  $('#bodytrainingvalue').html(btval+"%");
+}
 //default values
-setRest(50);
-setBT(50);
+loadGameView();

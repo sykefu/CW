@@ -1,8 +1,8 @@
 var paused = false;
 var game = new Game();
 var derp = 3;
-var restval = 0;
-var btval = 0;
+var restval = 50;
+var btval = 50;
 
 function initKiView(){
   getCultivation();
@@ -32,11 +32,22 @@ function getTimeSpent(){
   $('#timeSpent').html("<p>year "+ Math.floor(game.timeSpent/52) +", week "+ (game.timeSpent%52 + 1) +"</p>");
 }
 
+function overTimeBodyCultivation(speed){
+  game.bodyCultivation.strength = game.bodyCultivation.strength + 1*(btval/100);
+}
 
-
+function getBodyTraining(){
+    var strengthdisplay = game.bodyCultivation.strength.toFixed(2);
+    $('#bodyTraining').html("<p>body strength: " + strengthdisplay+"</p>");
+}
 
 window.setInterval(function(){
+  //mechanics
   TimePassing();
+  overTimeBodyCultivation();
+
+  //displays
   getTimeSpent();
+  getBodyTraining();
 
 }, 1000);

@@ -1,15 +1,20 @@
 
 <script src="js/sliderControl.js"></script>
-<div>Page d'accueil du jeu</div>
+
 <div>
   <h2>Choose how to spend your time</h2>
   <div class="slidecontainer">
   <!--TODO: add sliders for Adventure and Ki training. make adventure hidden until unlock.-->
     <h5>Rest</h5>
-    <input type="range" min="0s" max="100" value="50" class="slider" id="rest" oninput="setRest(this.value)">
+    <input type="range" min="0" max="100" value="50" class="slider" id="rest" oninput="setRest(this.value)">
     <span id="restvalue"></span><br/>
     <h5>Train Body</h5>
     <input type="range" min="0" max="100" value="50" class="slider" id="bodytraining" oninput="setBT(this.value)">
     <span id="bodytrainingvalue"></span><br/>
+  </div>
+  <div id="characterData">
+    <h5>Derp</h5>
+    <span id="bodyTraining"></span><br/>
+    <span id="timeSpent"></span><br/>
   </div>
 </div>

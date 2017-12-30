@@ -20,6 +20,7 @@ class bodyCultivation{
 class Game{
   constructor(){
     this.kiCultivation = new kiCultivation();
+    this.bodyCultivation = new bodyCultivation();
     this.lifespan = 70;
     this.timeSpent = 0;
     this.paused = false;
