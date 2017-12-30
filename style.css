@@ -2,6 +2,10 @@
   margin-top: 10px;
 }
 
+/*add some changes to the bootstrap's class*/
+.active{
+  background-color: grey;
+}
 
 .slidecontainer{
   width: 70%;

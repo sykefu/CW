@@ -9,6 +9,8 @@ function initKiView(){
   getTimeSpent();
 }
 
+
+
 function initBodyTrainingView(){
   $('#percentbodytraining').html("<p>"+btval+"</p>");
 }
@@ -40,7 +42,7 @@ function overTimeBodyCultivation(speed){
 
 function getBodyTraining(){
     var strengthdisplay = game.bodyCultivation.strength.toFixed(2);
-    $('#bodyTraining').html("<p>body strength: " + strengthdisplay+"</p>");
+    $('#bodyTrainingStrength').text(strengthdisplay);
 }
 
 window.setInterval(function(){

@@ -1,5 +1,6 @@
 $(function() {
-    $('#index').click(function() {
+    $('#game').click(function() {
+
         //chargement du contenu de la pge
         $('#main').load('game.html');
 

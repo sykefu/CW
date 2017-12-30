@@ -9,7 +9,8 @@ function setRest(value){
     $('#rest').trigger('change');
   }
 
-  $('#restvalue').html(restval+"%");
+  $('#restvalue').text(restval);
+  $('#remainingTimeValue').text(100-restval-btval);
 }
 
 
@@ -21,7 +22,8 @@ function setBT(value){
     $('#bodytraining').val(btval);
     $('#bodytraining').trigger('change');
   }
-  $('#bodytrainingvalue').html(btval+"%");
+  $('#bodytrainingvalue').text(btval);
+  $('#remainingTimeValue').text(100-restval-btval);
 
 }
 //TODO: add control for other sliders in game.html
@@ -30,11 +32,13 @@ function loadGameView(){
 
   $('#rest').val(restval);
   $('#rest').trigger('change');
-  $('#restvalue').html(restval+"%");
+  $('#restvalue').text(restval);
 
   $('#bodytraining').val(btval);
   $('#bodytraining').trigger('change');
-  $('#bodytrainingvalue').html(btval+"%");
+  $('#bodytrainingvalue').text(btval);
+
+  $('#remainingTimeValue').text(100-restval-btval);
 }
 //default values
 loadGameView();
