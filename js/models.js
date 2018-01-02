@@ -13,6 +13,7 @@ class bodyCultivation{
   constructor(){
     this.strength = 0;
     this.toughness = 0;
+    this.speed = 0;
     this.Rank = "mortal";
     this.cultivateClickValue = 1;
   }

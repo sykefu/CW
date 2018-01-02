@@ -2,11 +2,14 @@
 
   <div class="slideContainer">
   <!--TODO: add sliders for Adventure and Ki training. make adventure hidden until unlock.-->
-    <h5>Improve/enhanced? body strength</h5>
+    <h5>Train body strength</h5>
     <input type="range" min="0" max="100" value="50" class="slider" id="strengthTraining" oninput="setStr(this.value)">
     <span id="strengthTrainingValue"></span>%<br/>
-    <h5>Improve/enhanced? body toughness</h5>
+    <h5>Train body toughness</h5>
     <input type="range" min="0" max="100" value="50" class="slider" id="toughnessTraining" oninput="setTough(this.value)">
     <span id="toughnessTrainingValue"></span>%<br/>
+    <h5>Train body speed</h5>
+    <input type="range" min="0" max="100" value="50" class="slider" id="speedTraining" oninput="setSpeed(this.value)">
+    <span id="speedTrainingValue"></span>%<br/>
     <div>Body training remaining : <span id="remainingValue"></span>%</div>
   </div>

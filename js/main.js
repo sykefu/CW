@@ -13,15 +13,18 @@ var btVal = 50;
 trainBodySliderControl.js
 improvement distribution of the body training
 */
-var strVal = 50;
-var toughVal = 50;
+var strVal = 30;
+var toughVal = 40;
+var speedVal = 30;
 
 
 function initKiView(){
   getCultivation();
   getTimeSpent();
 }
-
+function initGameView(){
+  getBodyTraining();
+}
 
 
 function cultivateClick(){
@@ -48,6 +51,7 @@ function getTimeSpent(){
 function overTimeBodyCultivation(){
   game.bodyCultivation.strength = game.bodyCultivation.strength + (btVal/100)*(strVal/100);
   game.bodyCultivation.toughness = game.bodyCultivation.toughness + (btVal/100)*(toughVal/100);
+  game.bodyCultivation.speed = game.bodyCultivation.speed + (btVal/100)*(speedVal/100);
 }
 
 function getBodyTraining(){
@@ -56,6 +60,9 @@ function getBodyTraining(){
 
     var toughDisplay = game.bodyCultivation.toughness.toFixed(2);
     $('#bodyTrainingToughness').text(toughDisplay);
+
+    var speedDisplay = game.bodyCultivation.speed.toFixed(2);
+    $('#bodyTrainingSpeed').text(speedDisplay);
 
     if(game.bodyCultivation.strength >= 5 && game.bodyCultivation.toughness >= 5)
       $('#trainKi').removeClass("invisible");
