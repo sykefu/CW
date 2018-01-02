@@ -2,12 +2,14 @@ $(function() {
     $('#game').click(function() {
 
         //chargement du contenu de la pge
-        $('#main').load('game.html');
+        $('#main').load('views/game.html');
 
         //changement du lien actif
         $('li,#trainBody').removeClass('active');
         $('li,#trainKi').removeClass('active');
         $('li,#adventure').removeClass('active');
+
+        loadGameView()
         return false;
     });
 });
@@ -15,7 +17,7 @@ $(function() {
 
 $(function() {
     $('#trainBody').click(function() {
-        $('#main').load('trainBody.html');
+        $('#main').load('views/trainBody.html');
         $('li,#trainBody').addClass('active');
         $('li,#trainKi').removeClass('active');
         $('li,#adventure').removeClass('active');
@@ -26,7 +28,7 @@ $(function() {
 
 $(function() {
     $('#trainKi').click(function() {
-        $('#main').load('trainKi.html');
+        $('#main').load('views/trainKi.html');
         $('li,#trainKi').addClass('active');
         $('li,#trainBody').removeClass('active');
         $('li,#adventure').removeClass('active');
@@ -37,7 +39,7 @@ $(function() {
 
 $(function() {
     $('#adventure').click(function() {
-        $('#main').load('adventure.html');
+        $('#main').load('views/adventure.html');
         $('li,#adventure').addClass('active');
         $('li,#trainBody').removeClass('active');
         $('li,#trainKi').removeClass('active');
