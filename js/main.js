@@ -1,8 +1,21 @@
 var paused = false;
 var game = new Game();
 var derp = 3;
+
+/*
+sliderControl.js
+distribution of the time
+*/
 var restval = 50;
 var btval = 50;
+
+/*
+trainBodySliderControl.js
+improvement distribution of the body training
+*/
+var strVal = 50;
+var toughVal = 50;
+
 
 function initKiView(){
   getCultivation();
@@ -10,10 +23,6 @@ function initKiView(){
 }
 
 
-
-function initBodyTrainingView(){
-  $('#percentbodytraining').html("<p>"+btval+"</p>");
-}
 
 function cultivateClick(){
   game.kiCultivation.ki = game.kiCultivation.ki + game.kiCultivation.cultivateClickValue;
@@ -23,7 +32,7 @@ function cultivateClick(){
 }
 
 function getCultivation(){
-  $('#cultivation').html("<p>ki gathered: " + game.kiCultivation.ki+"</p>");
+  $('#cultivation').text(game.kiCultivation.ki);
 }
 
 function TimePassing(){
@@ -36,13 +45,20 @@ function getTimeSpent(){
   $('#timeSpentWeek').text(game.timeSpent%52 + 1);
 }
 
-function overTimeBodyCultivation(speed){
-  game.bodyCultivation.strength = game.bodyCultivation.strength + 1*(btval/100);
+function overTimeBodyCultivation(){
+  game.bodyCultivation.strength = game.bodyCultivation.strength + (btval/100)*(strVal/100);
+  game.bodyCultivation.toughness = game.bodyCultivation.toughness + (btval/100)*(toughVal/100);
 }
 
 function getBodyTraining(){
-    var strengthdisplay = game.bodyCultivation.strength.toFixed(2);
-    $('#bodyTrainingStrength').text(strengthdisplay);
+    var strengthDisplay = game.bodyCultivation.strength.toFixed(2);
+    $('#bodyTrainingStrength').text(strengthDisplay);
+
+    var toughDisplay = game.bodyCultivation.toughness.toFixed(2);
+    $('#bodyTrainingToughness').text(toughDisplay);
+
+    if(game.bodyCultivation.strength >= 5 && game.bodyCultivation.toughness >= 5)
+      $('#trainKi').removeClass("invisible");
 }
 
 window.setInterval(function(){

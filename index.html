@@ -5,22 +5,21 @@
   <title>Cultivation World</title>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <script src="bootstrap/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="libs/jquery-3.2.1.js"></script>
   <script src="js/models.js"></script>
   <script src="js/main.js"></script>
   <script src="js/menuListener.js"></script>
-  <script src="js/sliderControl.js"></script>
   <script>
     window.onload = function(){
-      $('#main').load('game.html');
+      $('#main').load('views/game.html');
     };
   </script>
 </head>
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
         <div class="navbar-header">
           <a id="game" class="navbar-brand" href="#">Cultivation World</a>
@@ -31,7 +30,7 @@
               <a id="trainBody" class="nav-link" href="#">Train Body</a>
             </li>
             <li class="nav-item">
-              <a id="trainKi" class="nav-link" href="#">Train Ki</a>
+              <a id="trainKi" class="nav-link invisible" href="#">Train Ki</a>
             </li>
             <li class="nav-item">
               <a id="adventure" class="nav-link invisible" href="#">Adventure</a>
@@ -47,7 +46,7 @@
 
     <!-- Time spent-->
     <div id="timeSpent" class="container">
-      <p>Year <span id="timeSpentYear">0</span>, weeks <span id="timeSpentWeek">0</span></p>
+      <p>Year <span id="timeSpentYear">0</span>, week <span id="timeSpentWeek">0</span></p>
     </div>
   </body>
 </html>

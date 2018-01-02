@@ -22,7 +22,7 @@ function setBT(value){
     $('#bodytraining').val(btval);
     $('#bodytraining').trigger('change');
   }
-  $('#bodytrainingvalue').text(btval);
+  $('#bodyTrainingValue').text(btval);
   $('#remainingTimeValue').text(100-restval-btval);
 
 }
@@ -36,7 +36,7 @@ function loadGameView(){
 
   $('#bodytraining').val(btval);
   $('#bodytraining').trigger('change');
-  $('#bodytrainingvalue').text(btval);
+  $('#bodyTrainingValue').text(btval);
 
   $('#remainingTimeValue').text(100-restval-btval);
 }
