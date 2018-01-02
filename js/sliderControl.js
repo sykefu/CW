@@ -1,44 +1,44 @@
 
 //TODO: add a min rest value, will make it dependant on how op you are later.
 function setRest(value){
-  restval = parseInt(value);
+  restVal = parseInt(value);
   //ugly code to prevent more than 100%
-  if((restval+btval) >= 100){
-    restval = 100 - btval;
-    $('#rest').val(restval);
+  if((restVal+btVal) >= 100){
+    restVal = 100 - btVal;
+    $('#rest').val(restVal);
     $('#rest').trigger('change');
   }
 
-  $('#restvalue').text(restval);
-  $('#remainingTimeValue').text(100-restval-btval);
+  $('#restValue').text(restVal);
+  $('#remainingTimeValue').text(100-restVal-btVal);
 }
 
 
 function setBT(value){
-  btval=parseInt(value);
+  btVal=parseInt(value);
   //copy pasted ugly code
-  if((restval+btval) >= 100){
-    btval = 100 - restval;
-    $('#bodytraining').val(btval);
-    $('#bodytraining').trigger('change');
+  if((restVal+btVal) >= 100){
+    btVal = 100 - restVal;
+    $('#bodyTraining').val(btVal);
+    $('#bodyTraining').trigger('change');
   }
-  $('#bodyTrainingValue').text(btval);
-  $('#remainingTimeValue').text(100-restval-btval);
+  $('#bodyTrainingValue').text(btVal);
+  $('#remainingTimeValue').text(100-restVal-btVal);
 
 }
 //TODO: add control for other sliders in game.html
 
 function loadGameView(){
 
-  $('#rest').val(restval);
+  $('#rest').val(restVal);
   $('#rest').trigger('change');
-  $('#restvalue').text(restval);
+  $('#restValue').text(restVal);
 
-  $('#bodytraining').val(btval);
-  $('#bodytraining').trigger('change');
-  $('#bodyTrainingValue').text(btval);
+  $('#bodyTraining').val(btVal);
+  $('#bodyTraining').trigger('change');
+  $('#bodyTrainingValue').text(btVal);
 
-  $('#remainingTimeValue').text(100-restval-btval);
+  $('#remainingTimeValue').text(100-restVal-btVal);
 }
 //default values
 loadGameView();

@@ -6,8 +6,8 @@ var derp = 3;
 sliderControl.js
 distribution of the time
 */
-var restval = 50;
-var btval = 50;
+var restVal = 50;
+var btVal = 50;
 
 /*
 trainBodySliderControl.js
@@ -46,8 +46,8 @@ function getTimeSpent(){
 }
 
 function overTimeBodyCultivation(){
-  game.bodyCultivation.strength = game.bodyCultivation.strength + (btval/100)*(strVal/100);
-  game.bodyCultivation.toughness = game.bodyCultivation.toughness + (btval/100)*(toughVal/100);
+  game.bodyCultivation.strength = game.bodyCultivation.strength + (btVal/100)*(strVal/100);
+  game.bodyCultivation.toughness = game.bodyCultivation.toughness + (btVal/100)*(toughVal/100);
 }
 
 function getBodyTraining(){
