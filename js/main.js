@@ -8,6 +8,7 @@ distribution of the time
 */
 var restVal = 50;
 var btVal = 50;
+var minRest = 20;//maybe put it in Game object ?
 
 /*
 trainBodySliderControl.js

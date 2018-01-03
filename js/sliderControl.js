@@ -3,6 +3,10 @@
 function setRest(value){
   restVal = parseInt(value);
   //ugly code to prevent more than 100%
+  if(restVal < minRest){
+    $('#rest').val(minRest);
+    return -1;
+  }
   if((restVal+btVal) >= 100){
     restVal = 100 - btVal;
     $('#rest').val(restVal);
