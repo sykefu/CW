@@ -5,6 +5,7 @@ function setRest(value){
   //ugly code to prevent more than 100%
   if(restVal < minRest){
     $('#rest').val(minRest);
+    restVal = minRest;
     return -1;
   }
   if((restVal+btVal) >= 100){
