@@ -8,8 +8,6 @@ $(function() {
         $('li,#trainBody').removeClass('active');
         $('li,#trainKi').removeClass('active');
         $('li,#adventure').removeClass('active');
-
-        loadGameView()
         return false;
     });
 });

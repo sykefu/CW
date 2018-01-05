@@ -8,15 +8,15 @@ distribution of the time
 */
 var restVal = 50;
 var btVal = 50;
-var minRest = 20;//maybe put it in Game object ?
+var minRest = 20;//maybe put it in Game object ? And start with a higher value around 40 or 50 ?
 
 /*
 trainBodySliderControl.js
 improvement distribution of the body training
 */
-var strVal = 30;
-var toughVal = 40;
-var speedVal = 30;
+var strVal = 33;
+var toughVal = 34;
+var speedVal = 33;
 
 
 function initKiView(){
@@ -24,6 +24,8 @@ function initKiView(){
   getTimeSpent();
 }
 function initGameView(){
+  if(game.kiCultivation.ki >= 10)
+    $('#kiSection').removeClass("invisible");
   getBodyTraining();
 }
 
@@ -37,6 +39,8 @@ function cultivateClick(){
 
 function getCultivation(){
   $('#cultivation').text(game.kiCultivation.ki);
+  if(game.kiCultivation.ki >= 10)
+    openPopup("Congratulation !","gg you now know how to train by yourself !");
 }
 
 function TimePassing(){

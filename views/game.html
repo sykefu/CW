@@ -6,12 +6,25 @@
   <h2>Choose how to spend your time</h2>
   <div class="slideContainer">
   <!--TODO: add sliders for Adventure and Ki training. make adventure hidden until unlock.-->
-    <h5>Rest</h5>
-    <input type="range" min="0" max="100" value="50" class="slider" id="rest" oninput="setRest(this.value)">
-    <span id="restValue"></span>%<br/>
-    <h5>Train Body</h5>
-    <input type="range" min="0" max="100" value="50" class="slider" id="bodyTraining" oninput="setBT(this.value)">
-    <span id="bodyTrainingValue"></span>%<br/>
+
+    <div id="restSection">
+      <h5>Rest</h5>
+      <input type="range" min="0" max="100" value="50" class="slider" id="rest" oninput="setRest(this.value)">
+      <span id="restValue"></span>%<br/>
+    </div>
+
+    <div id="bodySection">
+      <h5>Train Body</h5>
+      <input type="range" min="0" max="100" value="50" class="slider" id="bodyTraining" oninput="setBT(this.value)">
+      <span id="bodyTrainingValue"></span>%<br/>
+    </div>
+
+    <div id="kiSection" class="invisible">
+      <h5>Train Ki (todo)</h5>
+      <input type="range" min="0" max="100" value="0" class="slider" id="kiTraining" oninput="">
+      <span id="kiTrainingValue"></span>%<br/>
+    </div>
+
     <div>Time remaining : <span id="remainingTimeValue"></span>%</div>
   </div>
   <br/>

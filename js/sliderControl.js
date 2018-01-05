@@ -34,7 +34,6 @@ function setBT(value){
 //TODO: add control for other sliders in game.html
 
 function loadGameView(){
-
   $('#rest').val(restVal);
   $('#rest').trigger('change');
   $('#restValue').text(restVal);

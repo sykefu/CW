@@ -10,6 +10,7 @@
   <script src="js/models.js"></script>
   <script src="js/main.js"></script>
   <script src="js/menuListener.js"></script>
+  <script src="js/popup.js"></script>
   <script>
     window.onload = function(){
       $('#main').load('views/game.html');
@@ -48,5 +49,13 @@
     <div id="timeSpent" class="container">
       <p>Year <span id="timeSpentYear">0</span>, week <span id="timeSpentWeek">0</span></p>
     </div>
+    <div class="btn btn-primary" onclick="openPopup('olol','azetyazertyaeztyazey');">Popup</div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup_block">
+    	<h2 id="popupTitle"></h2>
+    	<p id="popupContent"></p>
+    </div>
+
   </body>
 </html>
